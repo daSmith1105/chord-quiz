@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Quiz App</title>
+		<meta charset="utf-8">
+		<meta name="Viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="The best quiz app ever">
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+	</head>
+
+	<body>
+		<header class="js-scoreBlock scoreContainer hidden" role="banner"></header> 
+		<main role="main">
+	    	<section class="startContainer js-startContainer" role="region">
+	    		<div class="js-startBlock">
+	    			<div class="modal warning slide-in">
+	    				<div class='warningText'>
+	    					<img class="warningTitle" src='https://blog.flamingtext.com/blog/2018/02/14/flamingtext_com_1518588373_179691349.png' alt="Guitar Chord Quiz">
+	    					<p>This application contains audio elements.</p>
+	    					<p>If you would like to take this quiz without audio please click the button below</p>
+	    					<button class="clearModal warningButton disableSoundButton" id="soundToggle">disable quiz audio</button>
+	    					<button class="clearModal warningButton enableSoundButton">continue quiz with audio</button>
+	    				</div>
+	    			</div>
+					<img class="titleText" src='https://blog.flamingtext.com/blog/2018/02/14/flamingtext_com_1518588373_179691349.png' alt="Guitar Chord Quiz">
+					<p class="startText js-startQuiz" autofocus>click the pick to begin</p>
+					<div>
+						<button class="startButton js-startQuiz" type="submit" title="BEGIN QUIZ"></button>
+					</div>
+				</div>
+			</section>
+
+			<section class="js-actionSection hidden">
+				<div class="centeringContainer">
+					<div class="js-actionBlock actionContainer">
+						<div>
+							<p>Please select an answer to continue</p>
+          					<button class='needAnswerButton'>continue</button>
+						</div>
+					</div>	
+				</div>
+			</section>
+
+			<section class="js-resultsSection hidden">
+				<div class="resultWideContainer">
+					<div class="js-resultsBlock resultsContainer"></div>
+				</div>	
+			</section>
+			<section class="needAnswer modalHolder fade-in hidden">
+				<div>
+					<p classs="needAnswerText">Please select an answer to continue</p>
+          			<button class='needAnswerButton'>continue</button>
+				</div>
+			</section>
+		</main>
+		
+		<audio id="startAudio" src="http://archive.notam02.no/DSP02/sounds/Gitarovertoner.wav"></audio>
+		<script type="text/javascript" src="STORE.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+
+	</body>
+</html>
