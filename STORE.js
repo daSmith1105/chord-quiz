@@ -4,7 +4,6 @@ const STORE = [
     choice: [
         'A minor',
         'C major',
-        
         'D major',
         'G major'
         ],
