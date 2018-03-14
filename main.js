@@ -19,34 +19,34 @@ function generateQuestion () {
     return `<form class="fade-in">
               <img class="chordImg" src=${STORE[questionNumber].questImg} alt=${STORE[questionNumber].alt}>
                 <fieldset>
-                  <legend>Name the Chord Above</legend>
-                  <div>
+                  <legend id="radio_label">Name the Chord Above</legend>
+                  <div role="group" aria-labelledby="radio_label">
                     <label class="answerOption labelL" for="choice1">
-                      <input type="radio" value="${STORE[questionNumber].choice[0]}" name="option" id="choice1" required >
+                      <input type="radio" value="${STORE[questionNumber].choice[0]}" name="option" id="choice1" aria-label="choice 1" required >
                       <span class="choiceText">\xa0\xa0${STORE[questionNumber].choice[0]}</span>
                     </label>
                 
                     <label class="answerOption labelR" for="choice2">
-                      <input type="radio" value="${STORE[questionNumber].choice[1]}" name="option" id="choice2" required>
+                      <input type="radio" value="${STORE[questionNumber].choice[1]}" name="option" id="choice2" aria-label="choice 2" required>
                       <span class="choiceText">\xa0\xa0${STORE[questionNumber].choice[1]}</span>
                     </label>
                   </div>
 
                   <div>
                     <label class="answerOption labelL" for="choice3">
-                      <input type="radio" value="${STORE[questionNumber].choice[2]}" name="option" id="choice3" required>
+                      <input type="radio" value="${STORE[questionNumber].choice[2]}" name="option" id="choice3" aria-label="choice 3" required>
                       <span class="choiceText">\xa0\xa0${STORE[questionNumber].choice[2]}</span>
                     </label>
                 
                     <label class="answerOption labelR" for="choice4">
-                      <input type="radio" value="${STORE[questionNumber].choice[3]}" name="option" id="choice4" required>
+                      <input type="radio" value="${STORE[questionNumber].choice[3]}" name="option" id="choice4" aria-label="choice 4" required>
                       <span class="choiceText">\xa0\xa0${STORE[questionNumber].choice[3]}</span>
                     </label>
+                    </fieldset>
                   </div>
-                  <div>
                     <button type="submit" class="submitAnswer">Submit answer</button>
                   </div>
-                </fieldset>
+                  </div>
               </form>`;
            } else {
              questionNumber = 10;
